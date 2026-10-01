@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafafa;
+  --surface: #ffffff;
+  --surface-2: #f2f2f4;
+  --border: #e4e4e7;
+  --foreground: #18181b;
+  --muted: #5b5b66;
+  --accent: #6d28d9;
+  --accent-foreground: #ffffff;
+  --ring: #8b5cf6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #09090b;
+    --surface: #111114;
+    --surface-2: #18181c;
+    --border: #27272a;
+    --foreground: #f4f4f5;
+    --muted: #a1a1aa;
+    --accent: #a78bfa;
+    --accent-foreground: #0b0613;
+    --ring: #c4b5fd;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@keyframes marquee-x {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Shiki renders both themes; pick one with the colour scheme. */
+.shiki,
+.shiki span {
+  background-color: transparent !important;
+}
+@media (prefers-color-scheme: dark) {
+  .shiki,
+  .shiki span {
+    color: var(--shiki-dark) !important;
+  }
+}
