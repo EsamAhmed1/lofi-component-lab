@@ -41,6 +41,8 @@ export interface RegistryEntry {
   states: string[];
   /** The final prompt used to build it (required by the challenge). */
   prompt: string;
+  /** What went wrong while building it and how it was fixed. */
+  notes: string[];
 }
 
 export const registry: RegistryEntry[] = [
@@ -97,6 +99,11 @@ Requirements:
 - Use theme tokens (bg-accent, text-accent-foreground, border-border, bg-surface) so it works in light and dark mode.
 - No external dependencies. Keep it accessible and fully responsive; add a fullWidth option for mobile layouts.
 Also write a demo showing all variants, sizes, a working async loading example, a disabled button, strength={0}, and a full-width button.`,
+    notes: [
+      "Touch screens fire pointer moves while you scroll, which made the button jump on phones. The magnet now ignores pointerType \"touch\".",
+      "Pointer moves write CSS variables inside requestAnimationFrame instead of React state, so the button never re-renders while it follows the cursor.",
+      "The code samples on this page first used Shiki's default GitHub theme. The axe scan failed it at 4.09:1 contrast in Chromium and WebKit, so the site switched to the high-contrast GitHub themes.",
+    ],
   },
   {
     slug: "testimonial-marquee",
@@ -149,6 +156,11 @@ Requirements:
 - Use a <section> with aria-labelledby (useId for the heading id) or aria-label when there is no heading. Return null for an empty list.
 - Responsive: narrower cards and gaps on mobile. Use theme tokens (bg-surface, border-border, text-muted, accent) for light and dark mode.
 Also write a demo with eight realistic testimonials across two rows.`,
+    notes: [
+      "The first version used a fixed heading id, which would clash if two marquees were on one page. It now uses useId.",
+      "The duplicate list needed for the seamless loop is aria-hidden, and hidden completely under reduced motion, so each testimonial is read once.",
+      "The usage snippet's comment colour failed contrast in dark mode (3.67:1) in the axe scan; fixed with the high-contrast code theme.",
+    ],
   },
 ];
 

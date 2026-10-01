@@ -50,7 +50,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               >
                 L
               </span>
-              Lofi Component Lab
+              <span className="hidden min-[440px]:inline">Lofi Component Lab</span>
+              <span className="sr-only min-[440px]:hidden">Lofi Component Lab</span>
             </Link>
             <div className="flex items-center gap-1 text-sm text-muted">
               <Link
@@ -59,6 +60,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               >
                 Components
               </Link>
+              <Link
+                href="/logs"
+                className="rounded-md px-3 py-1.5 hover:bg-surface-2 hover:text-foreground focus-visible:outline-2 focus-visible:outline-ring"
+              >
+                Logs
+              </Link>
+              <a
+                href="https://github.com/EsamAhmed1/lofi-component-lab"
+                className="rounded-md px-3 py-1.5 hover:bg-surface-2 hover:text-foreground focus-visible:outline-2 focus-visible:outline-ring"
+              >
+                GitHub
+              </a>
             </div>
           </nav>
         </header>

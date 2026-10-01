@@ -7,6 +7,13 @@ import { getEntry, registry } from "@/registry";
 import { CodeBlock } from "@/components/site/code-block";
 import { PreviewFrame } from "@/components/site/preview-frame";
 import { Tabs } from "@/components/site/tabs";
+import quality from "@/registry/quality.json";
+
+const BROWSERS = [
+  { id: "chromium", label: "Chromium" },
+  { id: "firefox", label: "Firefox" },
+  { id: "webkit", label: "WebKit" },
+];
 
 export const dynamicParams = false;
 
@@ -32,6 +39,9 @@ export default async function ComponentPage(props: PageProps<"/components/[slug]
   const prev = registry[index - 1];
   const next = registry[index + 1];
   const { Demo } = entry;
+  const pages = quality.pages as Record<string, { passed: string[]; failed: string[] } | undefined>;
+  const checks = pages[`/components/${entry.slug}`];
+  const testedOn = (quality as { generatedOn?: string }).generatedOn ?? null;
 
   return (
     <article className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
@@ -75,6 +85,48 @@ export default async function ComponentPage(props: PageProps<"/components/[slug]
           ))}
         </ul>
       </div>
+
+      <section aria-labelledby="quality-heading" className="mt-12">
+        <h2 id="quality-heading" className="mb-4 text-xl font-semibold tracking-tight">
+          Quality checks
+        </h2>
+        {checks ? (
+          <div className="rounded-xl border border-border bg-surface p-4 sm:p-5">
+            <ul className="grid gap-2 sm:grid-cols-3">
+              {BROWSERS.map((browser) =>
+                ["light", "dark"].map((scheme) => {
+                  const project = `${browser.id}-${scheme}`;
+                  const ok = checks.passed.includes(project);
+                  return (
+                    <li key={project} className="flex items-center gap-2 rounded-lg bg-surface-2 px-3 py-2 text-sm">
+                      <span aria-hidden className={ok ? "text-emerald-600 dark:text-emerald-400" : "text-red-600"}>
+                        {ok ? "✓" : "✕"}
+                      </span>
+                      <span>
+                        {browser.label} · {scheme}
+                        <span className="sr-only">{ok ? " passed" : " failed"}</span>
+                      </span>
+                    </li>
+                  );
+                }),
+              )}
+            </ul>
+            <p className="mt-3 text-sm text-muted">
+              Each run loads the page at 375, 768 and 1280 px (no horizontal overflow), fails on any console
+              error and runs an axe WCAG 2.1 AA scan. Accessibility violations across all runs:{" "}
+              <strong className="text-foreground">{quality.axeViolations}</strong>
+              {testedOn ? (
+                <>
+                  {" "}· last run <time dateTime={testedOn}>{testedOn}</time>
+                </>
+              ) : null}
+              .
+            </p>
+          </div>
+        ) : (
+          <p className="text-sm text-muted">Not tested yet.</p>
+        )}
+      </section>
 
       <section aria-labelledby="code-heading" className="mt-12">
         <h2 id="code-heading" className="mb-4 text-xl font-semibold tracking-tight">
@@ -127,6 +179,20 @@ export default async function ComponentPage(props: PageProps<"/components/[slug]
         </h2>
         <p className="mb-4 text-sm text-muted">The final prompt used to generate this component.</p>
         <CodeBlock code={entry.prompt} lang="md" label="Build prompt" />
+      </section>
+
+      <section aria-labelledby="notes-heading" className="mt-12">
+        <h2 id="notes-heading" className="mb-1 text-xl font-semibold tracking-tight">
+          Build notes
+        </h2>
+        <p className="mb-4 text-sm text-muted">What went wrong while building it, and how it was fixed.</p>
+        <ul className="space-y-2">
+          {entry.notes.map((note) => (
+            <li key={note} className="rounded-xl border border-border bg-surface p-4 text-sm leading-relaxed text-muted">
+              {note}
+            </li>
+          ))}
+        </ul>
       </section>
 
       <nav aria-label="More components" className="mt-14 grid gap-3 border-t border-border pt-8 sm:grid-cols-2">

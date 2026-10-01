@@ -1,0 +1,71 @@
+{
+  "generatedAt": "2026-10-01T19:45:56.971Z",
+  "generatedOn": "2026-10-02",
+  "status": "passed",
+  "projects": [
+    "chromium-dark",
+    "chromium-light",
+    "firefox-dark",
+    "firefox-light",
+    "webkit-dark",
+    "webkit-light"
+  ],
+  "axeViolations": 0,
+  "pages": {
+    "/logs": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/magnetic-button": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/testimonial-marquee": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    }
+  }
+}

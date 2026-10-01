@@ -12,12 +12,12 @@ interface CodeBlockProps {
 export async function CodeBlock({ code, lang = "tsx", label }: CodeBlockProps) {
   const html = await codeToHtml(code.trim(), {
     lang,
-    themes: { light: "github-light", dark: "github-dark" },
+    themes: { light: "github-light-high-contrast", dark: "github-dark-high-contrast" },
     defaultColor: "light",
   });
 
   return (
-    <div className="relative rounded-xl border border-border bg-surface-2">
+    <div className="relative rounded-xl border border-border bg-surface">
       <div className="absolute right-2 top-2 z-10">
         <CopyButton value={code.trim()} />
       </div>
