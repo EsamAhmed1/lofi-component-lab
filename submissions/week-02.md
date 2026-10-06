@@ -4,7 +4,8 @@ Post each block in the lofidb channel as its own message.
 
 ## Post 1 — Component 1 (1750 characters)
 
-```nWeek: 02
+```
+Week: 02
 Type: modal
 Component: Command Palette
 Live: https://lofi-component-lab.vercel.app/components/command-palette
@@ -24,7 +25,8 @@ Demo: Actions / Navigation / Theme / Help groups with icons, shortcuts, one disa
 
 ## Post 2 — Component 2 (1604 characters)
 
-```nWeek: 02
+```
+Week: 02
 Type: input
 Component: OTP Code Input
 Live: https://lofi-component-lab.vercel.app/components/otp-input
@@ -42,7 +44,8 @@ Demo: verify flow with a fake check (code shown in the hint), resend countdown, 
 
 ## Post 3 — Agent log (1346 characters)
 
-```nWeek: 02
+```
+Week: 02
 Task: Research and build a niche-by-niche website inspiration moodboard in Figma, split into page sections (nav, hero, reviews, pricing, FAQ, footer…)
 Agent: Claude Code (Claude Opus 5.5) + Claude in Chrome + Playwright + Figma Plugin API
 Prompt or workflow:
