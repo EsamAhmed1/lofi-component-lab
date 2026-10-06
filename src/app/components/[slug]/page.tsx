@@ -185,7 +185,7 @@ export default async function ComponentPage(props: PageProps<"/components/[slug]
         <h2 id="notes-heading" className="mb-1 text-xl font-semibold tracking-tight">
           Build notes
         </h2>
-        <p className="mb-4 text-sm text-muted">What went wrong while building it, and how it was fixed.</p>
+        <p className="mb-4 text-sm text-muted">Problems found while building and testing it, how they were fixed, and the decisions that shaped it.</p>
         <ul className="space-y-2">
           {entry.notes.map((note) => (
             <li key={note} className="rounded-xl border border-border bg-surface p-4 text-sm leading-relaxed text-muted">

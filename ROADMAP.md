@@ -14,8 +14,8 @@ Each component is a different idea. Types use the plain labels from the brief.
 |---|---|---|---|---|
 | 01 | 1–7 Oct | Magnetic Button | button | ✅ shipped |
 | 01 | 1–7 Oct | Testimonial Marquee | section | ✅ shipped |
-| 02 | 8–14 Oct | Command Palette (⌘K search) | modal | planned |
-| 02 | 8–14 Oct | OTP Code Input | input | planned |
+| 02 | 8–14 Oct | Command Palette (⌘K search) | modal | ✅ shipped |
+| 02 | 8–14 Oct | OTP Code Input | input | ✅ shipped |
 | 03 | 15–21 Oct | Mega Menu Navbar | navbar | planned |
 | 03 | 15–21 Oct | Sortable + Filterable Data Table | table | planned |
 | 03 | 15–21 Oct | Skeleton Shimmer Loader | loader | planned |

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T19:45:56.971Z",
-  "generatedOn": "2026-10-02",
+  "generatedAt": "2026-10-06T14:21:36.459Z",
+  "generatedOn": "2026-10-06",
   "status": "passed",
   "projects": [
     "chromium-dark",
@@ -23,6 +23,17 @@
       ],
       "failed": []
     },
+    "/": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
     "/components": {
       "passed": [
         "chromium-light",
@@ -34,7 +45,18 @@
       ],
       "failed": []
     },
-    "/": {
+    "/components/command-palette": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/otp-input": {
       "passed": [
         "chromium-light",
         "chromium-dark",

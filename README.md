@@ -52,5 +52,7 @@ Builds the site and runs Playwright in **Chromium, Firefox and WebKit, in light 
 |---|---|---|---|
 | 01 | Magnetic Button | button | [live](https://lofi-component-lab.vercel.app/components/magnetic-button) |
 | 01 | Testimonial Marquee | section | [live](https://lofi-component-lab.vercel.app/components/testimonial-marquee) |
+| 02 | Command Palette | modal | [live](https://lofi-component-lab.vercel.app/components/command-palette) |
+| 02 | OTP Code Input | input | [live](https://lofi-component-lab.vercel.app/components/otp-input) |
 
 The full 90-day plan is in [ROADMAP.md](ROADMAP.md). Weekly submission drafts are in [`submissions/`](submissions).

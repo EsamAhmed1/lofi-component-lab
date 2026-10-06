@@ -13,9 +13,13 @@ async function componentPaths(page: Page): Promise<string[]> {
 
 async function checkPage(page: Page, path: string) {
   const errors: string[] = [];
-  page.on("pageerror", (error) => errors.push(error.message));
+  // WebKit reports aborted Next.js link prefetches (?_rsc=) when the test navigates away; not a page error.
+  const abortedPrefetch = (text: string) => text.includes("_rsc=") && text.includes("access control checks");
+  page.on("pageerror", (error) => {
+    if (!abortedPrefetch(error.message)) errors.push(error.message);
+  });
   page.on("console", (msg) => {
-    if (msg.type() === "error") errors.push(msg.text());
+    if (msg.type() === "error" && !abortedPrefetch(msg.text())) errors.push(msg.text());
   });
 
   for (const width of WIDTHS) {

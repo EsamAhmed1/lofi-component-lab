@@ -14,6 +14,27 @@ export interface AgentLog {
 
 export const logs: AgentLog[] = [
   {
+    week: 2,
+    date: "2026-10-06",
+    outcome: "done",
+    task: "Research and build a niche-by-niche website inspiration moodboard in Figma, split into page sections",
+    kind: "Research & curation",
+    agent: "Claude Code (Claude Opus 5.5) with Claude in Chrome, Playwright and the Figma Plugin API",
+    workflow: `Prompts, in order:
+1. "Think yourself as a professional UI/UX designer. Research various websites, take inspiration from their designs and create a moodboard in Figma [link]. Attach screenshots of individual sections and organise them. I need every niche separately with multiple inspirations."
+2. "Pick the best and latest UI designs. Filter out what looks bad."
+3. "Make sure every section is available: reviews, pricing, footer, hero banner, nav bar."
+4. "There should be more niches, every niche should include lots of website sections, and every section should have multiple inspirations."
+
+Workflow the agent ran:
+1. Pulled 2025–2026 Awwwards Sites of the Day, Honorable Mentions and Nominees for 11 niches and built one award board per niche straight into Figma through the Plugin API (no manual drag-and-drop).
+2. After feedback, dropped weak and duplicate shots and switched to award winners only.
+3. Wrote a Playwright capture script for about 140 leading sites across 21 niches: full-page screenshots, automatic split into sections, a first-pass label per section (nav, hero, logos, features, reviews, pricing, FAQ, blog, contact, CTA, footer…), removal of cookie banners and pop-ups, plus extra About / Blog / Contact page passes.
+4. Built contact sheets so every section could be reviewed and hand-picked, then uploaded the picks into Figma as labelled "Page Sections" boards with one row per section type.`,
+    result:
+      "11 award-winner boards (153 references) plus section-library boards for 7 niches so far (SaaS, E-commerce, Fashion, Real Estate, Food, AI tools, Legal) with 466 hand-picked section screenshots, each labelled by site and section type. The remaining 14 niches are captured and being curated. Doing this by hand (finding, screenshotting, cropping and labelling 600+ sections) would have taken several days.",
+  },
+  {
     week: 1,
     date: "2026-10-02",
     outcome: "done",
