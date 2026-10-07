@@ -32,7 +32,7 @@ Workflow the agent ran:
 3. Wrote a Playwright capture script for about 140 leading sites across 21 niches: full-page screenshots, automatic split into sections, a first-pass label per section (nav, hero, logos, features, reviews, pricing, FAQ, blog, contact, CTA, footer…), removal of cookie banners and pop-ups, plus extra About / Blog / Contact page passes.
 4. Built contact sheets so every section could be reviewed and hand-picked, then uploaded the picks into Figma as labelled "Page Sections" boards with one row per section type.`,
     result:
-      "11 award-winner boards (153 references) plus section-library boards for 7 niches so far (SaaS, E-commerce, Fashion, Real Estate, Food, AI tools, Legal) with 441 hand-picked section screenshots, each labelled by site and section type. The remaining 14 niches are captured and being curated. Doing this by hand (finding, screenshotting, cropping and labelling 600+ sections) would have taken several days.",
+      "Finished moodboard in Figma with 23 named pages: a cover and index, 11 award-winner boards (153 references) and one page per niche for 21 niches, with 1,361 hand-picked section screenshots, each labelled by site and section type (1,514 references in total). Doing this by hand (finding, screenshotting, cropping and labelling 1,500+ sections) would have taken well over a week.",
   },
   {
     week: 1,
