@@ -53,6 +53,8 @@ export function AgentCard() {
       { name: "disabled", type: "boolean", default: "false", description: "Dims the card, stops the tilt and disables the link or button." },
       { name: "className / ref", type: "string / Ref<HTMLDivElement>", description: "Forwarded to the outer wrapper, along with other div props." },
     ],
+    brief:
+      "Build a React 19 + TypeScript + Tailwind v4 HoloCard, no dependencies: a trading card that tilts in 3D with a rainbow foil, glare and sparkle that follow the pointer, parallax layers and holo, gold and glass variants. Typed props, responsive, light/dark, whole card is a link or button with a focus ring, tap to shine, reduced motion.",
     postPrompt:
       "Build a React 19 + TypeScript + Tailwind v4 component called HoloCard with no dependencies: a collectible trading card with a holographic foil. The pointer tilts the card in 3D and moves a rainbow foil, a glare and a sparkle or etched texture (CSS variables in requestAnimationFrame, springy return). Art, rarity badge and text panel sit at different depths for parallax. Variants: holo, gold and glass. Typed props (title, subtitle, art or image, stats, rarity, footer, variant, pattern, intensity, maxTilt, href, onClick, disabled, className), responsive, light and dark mode, accessible (whole card is one link or button with a focus ring, keyboard focus tilts and shines, text on a solid panel), tap to shine on touch, reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "HoloCard" (holographic trading card) for Next.js App Router.
@@ -116,6 +118,8 @@ export function DeployStatus({ progress, step, failed }: { progress: number; ste
       { name: "errorText", type: "string", default: '"Something went wrong"', description: "Shown and announced on error." },
       { name: "className / ref", type: "string / Ref<HTMLDivElement>", description: "Forwarded to the outer wrapper, along with other div props." },
     ],
+    brief:
+      "Build a React 19 + TypeScript + Tailwind v4 OrbitLoader, no dependencies: a glowing core with three comet orbits, a progress arc with a counting %, an optional step pipeline, a check-and-burst success and a shake error. Typed props, responsive, light/dark, progressbar/status roles with a live region, reduced motion.",
     postPrompt:
       "Build a React 19 + TypeScript + Tailwind v4 component called OrbitLoader with no dependencies: a loader with a glowing core and three comet orbits at different speeds. With progress set, an arc fills around the core and the % counts up. Optional steps show a pipeline under it (done steps ticked, current one pulsing). Success collapses the orbits into a self-drawing check with a burst; error shakes and shows an alert. Typed props (label, progress, steps, currentStep, status, size, accent, speed, successText, errorText, className), responsive, light and dark mode, accessible (progressbar or status role, live region announces each step and the result), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "OrbitLoader" (kinetic loader) for Next.js App Router.

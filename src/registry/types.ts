@@ -41,6 +41,8 @@ export interface RegistryEntry {
   prompt: string;
   /** Short version of the prompt for the Discord post. */
   postPrompt?: string;
+  /** One-paragraph prompt for the single weekly Discord post. */
+  brief?: string;
   /** What went wrong while building it and how it was fixed. */
   notes: string[];
 }

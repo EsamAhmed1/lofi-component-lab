@@ -52,6 +52,8 @@ export function HowItWorks() {
       { name: "className", type: "string", description: "Extra classes on the section." },
       { name: "ref", type: "Ref<HTMLElement>", description: "Forwarded to the section element (React 19 ref prop)." },
     ],
+    brief:
+      "Build a React 19 + TypeScript + Tailwind v4 StickyScrollStory, no dependencies: steps scroll past a sticky visual panel; the active step lights up, a progress line fills and the panel cross-fades with a parallax tilt. Can scroll in its own box and stacks on phones. Typed props, light/dark, labelled region, dots with aria-current, reduced motion.",
     postPrompt:
       "Build a React 19 + TypeScript + Tailwind v4 component called StickyScrollStory with no dependencies: a scroll-driven feature section. A column of steps sits next to a sticky visual panel; as each step reaches the middle it lights up, a progress line fills between the dots and the panel cross-fades to that step's visual with a parallax tilt. A height prop makes it scroll inside its own box. On phones each visual shows above its step. Typed props (eyebrow, title, description, steps, height, align, onStepChange, regionLabel, className), responsive, light and dark mode, accessible (labelled scroll region, step dots as buttons with aria-current), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "Sticky Scroll Story" section for Next.js App Router.
@@ -124,6 +126,8 @@ export function ActivityCard({ days }: { days: { date: string; count: number }[]
       { name: "className", type: "string", description: "Extra classes on the card." },
       { name: "ref", type: "Ref<HTMLDivElement>", description: "Forwarded to the card (React 19 ref prop)." },
     ],
+    brief:
+      "Build a React 19 + TypeScript + Tailwind v4 ContributionHeatmap, no dependencies: a GitHub-style calendar with 4 colour presets, diagonal pop-in, hover glow and tooltip, streak stats, range switcher and legend, no Date during render. Typed props, scrolls sideways on phones, light/dark, grid role with arrow keys, reduced motion.",
     postPrompt:
       "Build a React 19 + TypeScript + Tailwind v4 component called ContributionHeatmap with no dependencies: a GitHub-style calendar heatmap. Weeks as columns and days as rows, 5 colour levels with 4 presets, cells that pop in along the diagonal, a glow and tooltip on hover or focus, stats (total, longest streak, current streak, best day), a range switcher and a legend. Scrolls sideways on phones, starting at the latest weeks. No Date during render, so no hydration errors. Typed props (data, startDate, endDate, weeks, ranges, preset, colorScale, cellSize, gap, weekStart, showStats, onSelectDay, title, unit, loading), light and dark mode, accessible (grid role with arrow-key navigation, a label on every day, hidden summary), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "Contribution Heatmap" chart for Next.js App Router.

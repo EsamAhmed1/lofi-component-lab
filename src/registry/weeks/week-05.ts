@@ -71,6 +71,8 @@ export function Pricing() {
       { name: "className", type: "string", description: "Extra classes on the root." },
       { name: "ref", type: "Ref<HTMLDivElement>", description: "Forwarded to the root element." },
     ],
+    brief:
+      "Build a React 19 + TypeScript + Tailwind v4 PlanComparisonTable, no dependencies: Monthly/Yearly switch with rolling prices, a real table with collapsible feature groups, sticky header and column, a highlighted plan with a border beam, and a one-plan picker on phones. Typed props, responsive, light/dark, accessible table, reduced motion.",
     postPrompt:
       "Build a React 19 + TypeScript + Tailwind v4 component called PlanComparisonTable with no dependencies: a pricing and feature comparison table. Monthly/Yearly switch with a sliding pill and \"Save 20%\" badge; prices roll digit by digit. Real table with caption, scoped headers, collapsible feature groups, check/dash cells, text and limit meters. Sticky header and first column, highlighted plan with a rotating border beam and glow, row and column hover. On phones a picker shows one plan at a time. Typed props (plans, groups, billing, defaultBilling, onBillingChange, onSelectPlan, caption, yearlyBadge, maxHeight, mobilePicker, locale, labels), responsive, light and dark mode, accessible (labelled scroll region, aria-expanded groups, \"Included\" / \"Not included\" text), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "PlanComparisonTable" (pricing + feature comparison) for Next.js App Router.
@@ -133,6 +135,8 @@ export function PayButton({ amount }: { amount: string }) {
       { name: "className", type: "string", description: "Extra classes on the root." },
       { name: "ref", type: "Ref<HTMLDivElement>", description: "Forwarded to the root element." },
     ],
+    brief:
+      "Build a React 19 + TypeScript + Tailwind v4 SlideToConfirm, no dependencies: drag a thumb along a shimmering pill to confirm; released early it springs back, then it shows loading, success with a particle burst or error with a shake. Default, danger and success variants. Typed props, responsive, light/dark, slider role with keys, reduced motion.",
     postPrompt:
       "Build a React 19 + TypeScript + Tailwind v4 component called SlideToConfirm with no dependencies: an iOS-style slide-to-confirm button. Drag the thumb along a pill track with a shimmering label; the track fills behind it, the thumb rolls and turns into a check past the threshold, otherwise it springs back. onConfirm can return a Promise: loading spinner, then success (drawn check and particle burst) or error (shake and retry), with optional auto reset. Variants: default, danger and success. Typed props (label, confirmLabel, successLabel, errorLabel, onConfirm, variant, threshold, resetAfter, disabled, icon, width, className), responsive, light and dark mode, accessible (slider role with arrow keys, Enter or Space confirms, results announced), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "SlideToConfirm" (iOS slide to unlock) for Next.js App Router.

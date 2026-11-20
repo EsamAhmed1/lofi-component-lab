@@ -38,6 +38,8 @@ export function AppShell() {
       { name: "className", type: "string", description: "Extra classes on the nav." },
       { name: "ref", type: "Ref<HTMLElement>", description: "Forwarded to the nav element." },
     ],
+    brief:
+      "Build a React 19 + TypeScript + Tailwind v4 MagnifyDock, no dependencies: a macOS-style glass dock where icons grow around the pointer, with tooltips, badges, active dot, divider and a click bounce; it turns into a scrollable bar when it can't fit. Typed props, responsive, light/dark, keyboard + ARIA, reduced motion.",
     postPrompt:
       "Build a React 19 + TypeScript + Tailwind v4 component called MagnifyDock with no dependencies: a macOS-style glass dock navbar. Icons grow smoothly around the pointer (cosine falloff, CSS variables in requestAnimationFrame), neighbours grow too and the dock widens. Tooltip on hover or focus, active dot, badge counts, group divider, disabled items and a bounce on click. If the magnified dock does not fit, it switches to a scrollable bar with snap and labels. Typed props (items, magnification, distance, baseSize, position, tile, label, onSelect, className), responsive, light and dark mode, accessible (nav list, roving tabindex with arrow keys, aria-current, focus magnifies too), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "MagnifyDock" (macOS-style glass dock navbar) for Next.js App Router.
@@ -107,6 +109,8 @@ export default function Page() {
       { name: "className", type: "string", description: "Extra classes on the section." },
       { name: "ref", type: "Ref<HTMLElement>", description: "Forwarded to the section element." },
     ],
+    brief:
+      "Build a React 19 + TypeScript + Tailwind v4 AuroraHero, no dependencies: a cinematic hero with a drifting aurora, grain and pointer spotlight, a rotating headline word, a border-beam CTA, count-up stats, logos and a pause button. Typed props, responsive, light/dark with 4.5:1 contrast, screen-reader text, reduced motion.",
     postPrompt:
       "Build a React 19 + TypeScript + Tailwind v4 component called AuroraHero with no dependencies: a cinematic landing hero. Animated aurora background (drifting blurred colour blobs, grain, faint grid, pointer spotlight), an eyebrow pill with shiny text, a headline where one word rotates with a blur and slide, two CTAs (the primary with a light beam running round its border), stats that count up when scrolled into view and a logo row. A pause button stops all motion. Typed props (eyebrow, headline parts, rotatingWords, description, primaryCta, secondaryCta, stats, logos, colors, align, headingLevel, className), responsive, light and dark mode with 4.5:1 text contrast, accessible (static sentence for screen readers, pause control), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "AuroraHero" (cinematic landing hero) for Next.js App Router.

@@ -11,12 +11,20 @@ export interface AgentLog {
   result: string;
   /** Shorter "Prompt or workflow" text for the Discord post (falls back to workflow). */
   post?: string;
+  /** Short task, workflow and result for the single weekly Discord post. */
+  briefTask?: string;
+  briefWorkflow?: string;
+  briefResult?: string;
   links?: { label: string; href: string }[];
 }
 
 export const logs: AgentLog[] = [
   {
     week: 9,
+    briefTask: "Visual QA of all 14 new components",
+    briefWorkflow:
+      "My Chrome window was minimised, so the agent switched to headless Playwright: 56 screenshots (light/dark, desktop/phone) plus open and pressed states, read every image, fixed issues and re-shot.",
+    briefResult: "Caught 2 layout bugs no test found (pricing table cut off, heatmap labels over cells), both fixed.",
     date: "2026-11-20",
     outcome: "done",
     task: "Visual QA of all 14 new components: light and dark, desktop and mobile, plus their open and pressed states",
@@ -36,6 +44,10 @@ Workflow:
   },
   {
     week: 8,
+    briefTask: "Script that writes the weekly Discord posts",
+    briefWorkflow:
+      "Wrote scripts/submissions.mjs: builds each week's post from the registry and agent logs and fails if a post is too long. A dry run caught an old post at 2,197 characters.",
+    briefResult: "Every week's post generated in one command, always matching the live links.",
     date: "2026-11-20",
     outcome: "done",
     task: "Write a script that builds the weekly Discord posts from the gallery's registry and checks the 2,000-character limit",
@@ -55,6 +67,10 @@ Workflow:
   },
   {
     week: 7,
+    briefTask: "Accessibility audit of the 14 new components",
+    briefWorkflow:
+      "axe WCAG 2.1 AA scan in 3 browsers, light and dark, plus a script that tabs through every component and checks each stop has a name and a drawn focus ring. It found Tailwind v4's outline-none hiding rings on 3 components; fixed with outline-solid.",
+    briefResult: "0 axe violations and a visible focus ring on every control.",
     date: "2026-11-20",
     outcome: "done",
     task: "Accessibility audit of the 14 new components: axe in 3 browsers and 2 colour schemes, plus a keyboard-only walk-through",
@@ -73,6 +89,10 @@ Workflow:
   },
   {
     week: 6,
+    briefTask: "Ran the cross-browser suite on the new components and fixed what failed",
+    briefWorkflow:
+      "Split the suite into one test per component, traced a 0-tests bug to a regex my own script broke, read 31 failures as out-of-memory crashes, not component bugs, and cut workers from 4 to 2 with one retry.",
+    briefResult: "166 passed, 0 failed in Chromium, Firefox and WebKit, light and dark.",
     date: "2026-11-20",
     outcome: "done",
     task: "Run the cross-browser test suite on the 14 new components and fix what fails",
@@ -91,6 +111,10 @@ Workflow:
   },
   {
     week: 5,
+    briefTask: "Built 14 components with 7 sub-agents in parallel",
+    briefWorkflow:
+      "Wrote one shared brief (one file per component, no dependencies, WCAG AA, reduced motion), launched 7 sub-agents at once, one per week, then integrated, built and tested.",
+    briefResult: "14 components (8,184 lines plus demos) in about 18 minutes, all type-checked and built on first integration.",
     date: "2026-11-20",
     outcome: "done",
     task: "Build 14 components at once with 7 sub-agents working in parallel, one per challenge week",
@@ -115,6 +139,10 @@ Workflow:
   },
   {
     week: 4,
+    briefTask: "Refactored the component registry into one file per week",
+    briefWorkflow:
+      "Split the 293-line registry into per-week files with a script (no text retyped), checked types and that the build listed the same routes, then pointed the tests and post script at the new files.",
+    briefResult: "No change to the live site, and 7 agents could add 14 components in parallel with zero conflicts.",
     date: "2026-11-20",
     outcome: "done",
     task: "Refactor the component registry into one file per week so several agents can add components at the same time",
@@ -134,6 +162,10 @@ Workflow:
   },
   {
     week: 3,
+    briefTask: "Researched 10 component libraries and planned 14 unique components",
+    briefWorkflow:
+      "Opened each library in my Chrome and pulled its catalog with a script (Skiper UI froze, so it was skipped), picked ideas that recur across the best ones, checked for repeats, gave each week 2 different types and rewrote the roadmap.",
+    briefResult: "A 14-component plan for weeks 3-9 with no repeats, in minutes instead of hours of browsing.",
     date: "2026-11-20",
     outcome: "done",
     task: "Study 10 component libraries in the browser and turn them into a plan for 14 unique components",

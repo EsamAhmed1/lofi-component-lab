@@ -62,6 +62,8 @@ export function SignInPage() {
       { name: "disabled", type: "boolean", default: "false", description: "Locks every field, the toggle and the submit button." },
       { name: "className", type: "string", description: "Extra classes for the card." },
     ],
+    brief:
+      "Build a React 19 + TypeScript + Tailwind v4 PeekabooLogin, no dependencies: a sign-in form with an SVG owl that follows the caret, covers its eyes on the password, peeks when it is shown, shakes on errors and bounces on success. Validation, show/hide, loading and success states. Typed props, responsive, light/dark, accessible errors, reduced motion.",
     postPrompt:
       "Build a React 19 + TypeScript + Tailwind v4 component called PeekabooLogin with no dependencies: a sign-in form with an animated SVG owl. Its eyes follow the caret while you type the email, its wings cover its eyes on the password field, it peeks when the password is shown, shakes its head on an error, bounces and blushes on success, and blinks when idle. Validation on blur and submit, show/hide password, remember me, forgot link, loading button, error banner and success panel. Typed props (onSubmit returning a Promise, title, subtitle, hint, mascotColor, minPasswordLength, forgotHref, signUpHref, labels, disabled, className), responsive, light and dark mode, accessible (labelled fields, aria-invalid with linked errors, alert banner, aria-pressed toggle), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "PeekabooLogin" sign-in form with an animated owl mascot for Next.js App Router.
@@ -136,6 +138,8 @@ export function TodayCard({ week }: { week: ActivityDay[] }) {
       { name: "animate", type: "boolean", default: "true", description: "Draw in on scroll and tween between days. Off under reduced motion." },
       { name: "className", type: "string", description: "Extra classes for the root section." },
     ],
+    brief:
+      "Build a React 19 + TypeScript + Tailwind v4 ActivityRings, no dependencies: Apple Watch-style gradient rings that draw in on scroll, wrap past 100% and highlight on hover with a centre readout, plus a 7-day row of mini rings. Typed props, responsive, light/dark, image summary, hidden data table, aria-pressed buttons, reduced motion.",
     postPrompt:
       "Build a React 19 + TypeScript + Tailwind v4 component called ActivityRings with no dependencies: an Apple Watch-style ring chart. Concentric SVG rings with gradient strokes, round caps and a shadow at the tip; over 100% wraps a darker second lap. Rings draw in when scrolled into view. Hovering a ring or legend item dims the others and shows value, goal and percent in the centre. Optional row of 7 mini ring sets to switch days. Typed props (rings, size, thickness, gap, days, selectedDay, onSelectDay, title, showLegend, animate, className), responsive, light and dark mode, accessible (summary label, hidden data table, legend and day buttons with aria-pressed), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "ActivityRings" chart (Apple Watch style) for Next.js App Router.
