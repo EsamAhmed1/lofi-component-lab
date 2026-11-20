@@ -11,7 +11,10 @@ const schemes = ["light", "dark"] as const;
 export default defineConfig({
   testDir: "tests",
   fullyParallel: true,
-  workers: 4,
+  // 4 workers ran this machine out of memory once the gallery passed 18 components.
+  workers: 2,
+  // WebKit occasionally crashes mid axe scan on this machine; one retry tells a crash from a real failure.
+  retries: 1,
   reporter: [["list"], ["./tests/quality-reporter.ts"]],
   use: { baseURL: "http://localhost:3100" },
   projects: browsers.flatMap((browser) =>

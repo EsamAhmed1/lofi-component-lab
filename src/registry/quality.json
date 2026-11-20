@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-06T14:21:36.459Z",
-  "generatedOn": "2026-10-06",
+  "generatedAt": "2026-11-20T16:50:21.084Z",
+  "generatedOn": "2026-11-20",
   "status": "passed",
   "projects": [
     "chromium-dark",
@@ -12,17 +12,6 @@
   ],
   "axeViolations": 0,
   "pages": {
-    "/logs": {
-      "passed": [
-        "chromium-light",
-        "chromium-dark",
-        "firefox-light",
-        "firefox-dark",
-        "webkit-light",
-        "webkit-dark"
-      ],
-      "failed": []
-    },
     "/": {
       "passed": [
         "chromium-light",
@@ -35,6 +24,39 @@
       "failed": []
     },
     "/components": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/logs": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/magnetic-button": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/testimonial-marquee": {
       "passed": [
         "chromium-light",
         "chromium-dark",
@@ -67,7 +89,7 @@
       ],
       "failed": []
     },
-    "/components/magnetic-button": {
+    "/components/magnify-dock": {
       "passed": [
         "chromium-light",
         "chromium-dark",
@@ -78,7 +100,139 @@
       ],
       "failed": []
     },
-    "/components/testimonial-marquee": {
+    "/components/aurora-hero": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/holo-card": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/orbit-loader": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/plan-comparison-table": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/slide-to-confirm": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/peekaboo-login": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/activity-rings": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/morph-card-modal": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/dial-knob": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/sticky-scroll-story": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/burst-like-button": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/contribution-heatmap": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/island-navbar": {
       "passed": [
         "chromium-light",
         "chromium-dark",

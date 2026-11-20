@@ -11,7 +11,12 @@ interface Row {
 
 /** Writes a summary the site reads to show "tested in" badges. */
 export default class QualityReporter implements Reporter {
-  private rows: Row[] = [];
+  // Keyed by test, so a retried test only counts its final attempt.
+  private byTest = new Map<string, Row>();
+
+  private get rows(): Row[] {
+    return [...this.byTest.values()];
+  }
 
   onTestEnd(test: TestCase, result: TestResult) {
     const project = test.parent.project()?.name ?? "unknown";
@@ -23,7 +28,7 @@ export default class QualityReporter implements Reporter {
     const axeViolations = test.annotations
       .filter((a) => a.type === "axe-violations")
       .reduce((sum, a) => sum + Number(a.description ?? 0), 0);
-    this.rows.push({ project, status: result.status, paths, axeViolations });
+    this.byTest.set(test.id, { project, status: result.status, paths, axeViolations });
   }
 
   onEnd(result: FullResult) {

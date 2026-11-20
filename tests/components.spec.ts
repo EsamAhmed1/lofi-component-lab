@@ -1,14 +1,17 @@
 import { expect, test, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
+import { readdirSync, readFileSync } from "node:fs";
+import path from "node:path";
 
 const WIDTHS = [375, 768, 1280];
 
-async function componentPaths(page: Page): Promise<string[]> {
-  await page.goto("/components");
-  const hrefs = await page
-    .locator('main a[href^="/components/"]')
-    .evaluateAll((links) => links.map((a) => a.getAttribute("href") ?? ""));
-  return [...new Set(hrefs)];
+/** Component slugs read from the per-week registry files, so each component gets its own test. */
+function componentSlugs(): string[] {
+  const dir = path.join(process.cwd(), "src", "registry", "weeks");
+  return readdirSync(dir)
+    .filter((f) => f.endsWith(".ts"))
+    .sort()
+    .flatMap((f) => [...readFileSync(path.join(dir, f), "utf8").matchAll(/\bslug:\s*"([^"]+)"/g)].map((m) => m[1]));
 }
 
 async function checkPage(page: Page, path: string) {
@@ -56,16 +59,20 @@ test("agent logs", async ({ page }) => {
   await expect(page.getByRole("heading", { level: 1, name: "Agent logs" })).toBeVisible();
 });
 
-test("every component page", async ({ page }) => {
-  const paths = await componentPaths(page);
-  expect(paths.length).toBeGreaterThan(0);
-  for (const path of paths) {
-    await test.step(path, async () => {
-      await checkPage(page, path);
-      await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-      await expect(page.getByText("Live preview")).toBeVisible();
-      await expect(page.getByRole("tab", { name: "Usage" })).toBeVisible();
-    });
-    test.info().annotations.push({ type: "component", description: path });
+test("components index lists every component", async ({ page }) => {
+  await page.goto("/components");
+  for (const slug of componentSlugs()) {
+    await expect(page.locator(`main a[href="/components/${slug}"]`).first()).toBeAttached();
   }
 });
+
+for (const slug of componentSlugs()) {
+  test(`component: ${slug}`, async ({ page }) => {
+    const path = `/components/${slug}`;
+    test.info().annotations.push({ type: "component", description: path });
+    await checkPage(page, path);
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    await expect(page.getByText("Live preview")).toBeVisible();
+    await expect(page.getByRole("tab", { name: "Usage" })).toBeVisible();
+  });
+}
