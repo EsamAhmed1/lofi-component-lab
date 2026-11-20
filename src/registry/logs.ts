@@ -63,7 +63,7 @@ Workflow:
 5. It generated the posts for weeks 3 to 9.`,
     post: `Workflow: 1) Copied the post format from a teammate's screenshots. 2) Agent wrote scripts/submissions.mjs: reads the per-week registry + agent logs, builds one post per component and per log, writes submissions/week-NN.md. 3) Measures every post and fails if one is over Discord's 2,000-character limit. 4) Dry run on week 2 caught an agent log at 2,197 chars, so logs got a short "post" field for Discord. 5) Generated weeks 3 to 9.`,
     result:
-      "21 posts for weeks 3 to 9 generated in one command, all under 2,000 characters, with links that always match the live pages. Before this, each post was put together and counted by hand.",
+      "21 posts for weeks 3 to 9 generated in one command, all under the limit, with links that always match the live pages. When the LofiDB bot asked for one field per line, the format changed in one place and all 21 posts were regenerated in seconds.",
   },
   {
     week: 7,

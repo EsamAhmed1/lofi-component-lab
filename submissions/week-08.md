@@ -26,13 +26,13 @@ Prompt: Build a React 19 + TypeScript + Tailwind v4 component called Contributio
 @LofiDB
 ```
 
-## Post 3: Agent log (814 characters)
+## Post 3: Agent log (874 characters)
 
 ```
 Week: 08
 Task: Write a script that builds the weekly Discord posts from the gallery's registry and checks the 2,000-character limit
 Agent: Claude Code (Claude Opus 5.5)
 Prompt or workflow: 1) Copied the post format from a teammate's screenshots. 2) Agent wrote scripts/submissions.mjs: reads the per-week registry + agent logs, builds one post per component and per log, writes submissions/week-NN.md. 3) Measures every post and fails if one is over Discord's 2,000-character limit. 4) Dry run on week 2 caught an agent log at 2,197 chars, so logs got a short "post" field for Discord. 5) Generated weeks 3 to 9.
-Result: 21 posts for weeks 3 to 9 generated in one command, all under 2,000 characters, with links that always match the live pages. Before this, each post was put together and counted by hand.
+Result: 21 posts for weeks 3 to 9 generated in one command, all under the limit, with links that always match the live pages. When the LofiDB bot asked for one field per line, the format changed in one place and all 21 posts were regenerated in seconds.
 @LofiDB
 ```
