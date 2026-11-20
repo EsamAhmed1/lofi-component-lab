@@ -45,6 +45,8 @@ export function Hero() {
       { name: "fullWidth", type: "boolean", default: "false", description: "Stretch to the parent's width." },
       { name: "...rest", type: "ButtonHTMLAttributes", description: "Any native button prop (onClick, type, disabled, aria-*)." },
     ],
+    postPrompt:
+      "Build a React 19 + TypeScript + Tailwind v4 component called MagneticButton with no dependencies: a call-to-action button that drifts toward the pointer and shows a soft glow where the pointer is (CSS variables in requestAnimationFrame, no re-renders). Three variants (solid, outline, ghost), three sizes, left and right icon slots, full width, loading with a spinner and disabled. The magnet turns off for touch, disabled, loading and reduced motion. Typed props (variant, size, strength, loading, loadingLabel, leftIcon, rightIcon, fullWidth, plus every native button prop), forwards its ref, responsive, light and dark mode, accessible (focus-visible ring, aria-busy and screen-reader text while loading), reduced-motion support.",
     prompt: `Build a reusable React + TypeScript + Tailwind CSS v4 "MagneticButton" component for a Next.js App Router project.
 
 Requirements:
@@ -102,6 +104,8 @@ export function SocialProof() {
       { name: "ariaLabel", type: "string", default: '"Customer testimonials"', description: "Region name when no heading is set." },
       { name: "className", type: "string", description: "Extra classes for the section." },
     ],
+    postPrompt:
+      "Build a React 19 + TypeScript + Tailwind v4 component called TestimonialMarquee with no dependencies: an endless wall of testimonial cards (quote, star rating, avatar or initials, name and role) scrolling in one or two rows in opposite directions, with faded edges. Pure CSS animation that pauses on hover or keyboard focus. With reduced motion it becomes a normal scrollable list. Typed props (testimonials, heading, subheading, rows, duration, pauseOnHover, ariaLabel, className), responsive, light and dark mode, accessible (duplicate cards hidden from screen readers, rating read as text, labelled section), handles an empty list.",
     prompt: `Build a reusable React + TypeScript + Tailwind CSS v4 "TestimonialMarquee" section component for a Next.js App Router project. It should work as a Server Component (no client JS).
 
 Requirements:

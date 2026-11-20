@@ -44,6 +44,8 @@ export function AppShell() {
       { name: "label", type: "string", default: '"Command palette"', description: "Accessible name of the dialog." },
       { name: "closeOnSelect", type: "boolean", default: "true", description: "Close after an item runs." },
     ],
+    postPrompt:
+      "Build a React 19 + TypeScript + Tailwind v4 component called CommandPalette with no dependencies: a Cmd/Ctrl+K command menu built on the native dialog with showModal() (focus trap, Escape, inert page, scroll lock, focus returns to the opener). Grouped items with icons, descriptions, keyboard shortcuts and disabled items. Search ranks prefix, word, contains, keyword and loose in-order matches (\"nwp\" finds \"New project\") and highlights matches. Arrow keys wrap, Home/End, Enter runs, the first Escape clears the query. Typed props (open, onOpenChange, items, placeholder, emptyMessage, hotkey, loading, label, closeOnSelect), responsive, light and dark mode, accessible (combobox and listbox pattern with aria-activedescendant, live result count), loading and empty states.",
     prompt: `Build a reusable React + TypeScript + Tailwind v4 "CommandPalette" (⌘K menu) for Next.js App Router.
 
 - Controlled: open / onOpenChange. Typed items: { id, label, group?, description?, keywords?, shortcut?, icon?, disabled?, onSelect }. Props: placeholder, emptyMessage, hotkey (⌘/Ctrl + letter, default "k", false = off), loading, label, closeOnSelect.
@@ -110,6 +112,8 @@ export function VerifyStep() {
       { name: "name", type: "string", description: "Adds a hidden input so the code submits with a form." },
       { name: "autoFocus", type: "boolean", default: "false", description: "Focus the first box on mount." },
     ],
+    postPrompt:
+      "Build a React 19 + TypeScript + Tailwind v4 component called OtpInput with no dependencies: a one-time code input with one box per character. Typing fills and advances, Backspace steps back, arrows and Home/End move, paste fills every box (spaces and dashes stripped) and SMS autofill works through autocomplete=\"one-time-code\". No gaps allowed, and it survives very fast typing. Numeric or alphanumeric, optional mask and groups. States: loading, error with a shake, success and disabled. Typed props (length, value, defaultValue, onChange, onComplete, mode, mask, status, label, message, groupSize, disabled, name, autoFocus), responsive down to 320px, light and dark mode, accessible (labelled group, \"Digit 3 of 6\" labels, aria-invalid, live message), reduced-motion support.",
     prompt: `Build a reusable React + TypeScript + Tailwind v4 "OtpInput" (one-time code) for Next.js App Router.
 
 - One <input> per character. Typed props: length (6), value / defaultValue (controlled or not), onChange, onComplete (fires once when full), mode ("numeric" | "alphanumeric", upper-case letters), mask, status ("idle" | "loading" | "error" | "success"), label, message, groupSize (separator every N), disabled, name (hidden input for forms), autoFocus.

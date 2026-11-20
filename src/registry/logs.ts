@@ -201,6 +201,8 @@ Workflow the agent ran:
 2. After feedback, dropped weak and duplicate shots and switched to award winners only.
 3. Wrote a Playwright capture script for about 140 leading sites across 21 niches: full-page screenshots, automatic split into sections, a first-pass label per section (nav, hero, logos, features, reviews, pricing, FAQ, blog, contact, CTA, footer…), removal of cookie banners and pop-ups, plus extra About / Blog / Contact page passes.
 4. Built contact sheets so every section could be reviewed and hand-picked, then uploaded the picks into Figma as labelled "Page Sections" boards with one row per section type.`,
+    post:
+      "Prompt: \"Think yourself as a professional UI/UX designer. Research various websites, take inspiration and create a moodboard in Figma. Attach screenshots of individual sections and organise them. I need every niche separately with multiple inspirations.\" Workflow: 1) Pulled 2025-2026 Awwwards winners for 11 niches and built the boards in Figma through the Plugin API. 2) Playwright captured about 140 leading sites across 21 niches, split each page into sections, labelled them and removed cookie pop-ups. 3) Contact sheets to hand-pick the best of each section. 4) Uploaded the picks into labelled boards, one row per section type.",
     result:
       "Finished moodboard in Figma with 23 named pages: a cover and index, 11 award-winner boards (153 references) and one page per niche for 21 niches, with 1,361 hand-picked section screenshots, each labelled by site and section type (1,514 references in total). Doing this by hand (finding, screenshotting, cropping and labelling 1,500+ sections) would have taken well over a week.",
   },
@@ -220,6 +222,8 @@ What the agent did, step by step:
 4. Built the site: registry, preview with Desktop/Tablet/Mobile widths, Shiki code blocks, accessible tabs, props table.
 5. Wrote a Playwright suite: Chromium, Firefox and WebKit, light and dark, 375/768/1280 px overflow checks and an axe accessibility scan. It caught low-contrast code colours, which the agent fixed.
 6. Created the public GitHub repo, pushed, imported it into Vercel and deployed.`,
+    post:
+      "1) I pasted the full challenge brief (Track A + Track B rules and the tech stack) and wrote: \"understand this and start working on this\". 2) Agent turned it into a plan: Next.js + TypeScript + Tailwind gallery, one page per component with live preview, code, props and prompt, and a 30-component roadmap. 3) Read the bundled Next 16 docs first, then built the site and the first 2 components (Magnetic Button, Testimonial Marquee). 4) Wrote a Playwright suite: Chromium, Firefox and WebKit, light and dark, 375/768/1280 px and an axe scan, which caught low-contrast code colours that it fixed. 5) Created the GitHub repo, pushed and deployed on Vercel.",
     result:
       "A live gallery with 2 components, each on its own page, passing 18/18 cross-browser tests with 0 accessibility violations. About 4–5 hours of setup and boilerplate done in one session; I only had to approve the GitHub and Vercel logins.",
     links: [
