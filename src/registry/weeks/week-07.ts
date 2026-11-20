@@ -46,6 +46,8 @@ export function Trips() {
       { name: "closeLabel", type: "string", default: '"Close"', description: "Accessible name of the close button." },
       { name: "className", type: "string", description: "Classes for the root element." },
     ],
+    postPrompt:
+      "Build a React 19 + TypeScript + Tailwind v4 component called MorphCardModal with no dependencies: a grid of cards where clicking one grows it into a modal from the card's exact position. Use the native dialog with showModal() and a FLIP animation with the Web Animations API, so the panel, image, title and subtitle all morph and the backdrop blurs in. Closing with the button, Escape, a backdrop click or a swipe down plays it backwards into the card. On phones it is a bottom sheet with a drag handle. Typed props (items, columns, onOpenChange, renderCard, closeLabel, className), responsive, light and dark mode, accessible (focus trap, labelled dialog, focus returns to the card), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "MorphCardModal" for Next.js App Router.
 
 - Grid of cards; clicking one grows it into a modal from the card's exact position and shrinks back on close.
@@ -119,6 +121,8 @@ export function FilterControls() {
       { name: "haptics", type: "boolean", default: "false", description: "Calls navigator.vibrate(5) on each detent where supported." },
       { name: "className", type: "string", description: "Classes for the root element." },
     ],
+    postPrompt:
+      "Build a React 19 + TypeScript + Tailwind v4 component called DialKnob with no dependencies: a tactile rotary knob like a synth control. A 270° sweep with ticks and an arc that light up with a glow, a soft 3D body with a turning notch and the value in the centre. Drag up/down or around the ring, mouse wheel, double-click to reset, and keys (arrows, Page Up/Down, Home/End). Values snap to steps with a small tick animation and optional vibration. Typed props (value, defaultValue, onChange, min, max, step, taper, label, unit, formatValue, resetValue, size, color, disabled, name, haptics), responsive, light and dark mode, accessible (slider role with value text and unit, hidden input for forms), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "DialKnob" (rotary synth knob) for Next.js App Router.
 
 - 270° sweep in SVG: major and minor ticks plus an arc; ticks and arc light up to the value in a colour prop with a drop-shadow glow (CSS filter on the <svg>).

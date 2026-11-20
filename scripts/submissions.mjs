@@ -11,7 +11,9 @@ import path from "node:path";
 const ROOT = path.resolve(import.meta.dirname, "..");
 const SITE = "https://lofi-component-lab.vercel.app";
 const REPO = "https://github.com/EsamAhmed1/lofi-component-lab";
-const LIMIT = 2000;
+// Discord allows 2,000 characters, but the @LofiDB mention and emoji count for more than they show,
+// so posts are kept well under it.
+const LIMIT = 1500;
 
 /** Reads a string field written as "...", '...' or `...` (template literals without ${}). */
 function field(block, name) {
@@ -58,7 +60,7 @@ function components() {
       kind: field(b, "kind"),
       week: number(b, "week"),
       source: field(b, "source"),
-      prompt: field(b, "prompt"),
+      prompt: field(b, "postPrompt") ?? field(b, "prompt"),
     }));
 }
 
@@ -105,7 +107,7 @@ function build(week) {
   posts.forEach((p, i) => {
     const len = p.body.length;
     if (len > LIMIT) failed = true;
-    md += `\n## Post ${i + 1}: ${p.kind} (${len} characters${len > LIMIT ? `, OVER THE ${LIMIT} LIMIT` : ""})\n\n\`\`\`\n${p.body}\n\`\`\`\n`;
+    md += `\n## Post ${i + 1}: ${p.kind} (${len} characters${len > LIMIT ? `, OVER THE ${LIMIT} TARGET` : ""})\n\n\`\`\`\n${p.body}\n\`\`\`\n`;
   });
   writeFileSync(path.join(ROOT, "submissions", `week-${pad(week)}.md`), md);
   console.log(`week ${pad(week)}: ${posts.map((p) => p.body.length).join(", ")} chars${failed ? "  <-- too long" : ""}`);

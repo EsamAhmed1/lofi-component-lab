@@ -39,6 +39,8 @@ export interface RegistryEntry {
   states: string[];
   /** The final prompt used to build it (required by the challenge). */
   prompt: string;
+  /** Short version of the prompt for the Discord post. */
+  postPrompt?: string;
   /** What went wrong while building it and how it was fixed. */
   notes: string[];
 }

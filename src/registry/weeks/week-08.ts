@@ -52,6 +52,8 @@ export function HowItWorks() {
       { name: "className", type: "string", description: "Extra classes on the section." },
       { name: "ref", type: "Ref<HTMLElement>", description: "Forwarded to the section element (React 19 ref prop)." },
     ],
+    postPrompt:
+      "Build a React 19 + TypeScript + Tailwind v4 component called StickyScrollStory with no dependencies: a scroll-driven feature section. A column of steps sits next to a sticky visual panel; as each step reaches the middle it lights up, a progress line fills between the dots and the panel cross-fades to that step's visual with a parallax tilt. A height prop makes it scroll inside its own box. On phones each visual shows above its step. Typed props (eyebrow, title, description, steps, height, align, onStepChange, regionLabel, className), responsive, light and dark mode, accessible (labelled scroll region, step dots as buttons with aria-current), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "Sticky Scroll Story" section for Next.js App Router.
 
 - Column of steps (number, h3 title, description, optional bullets) next to a sticky visual panel. Typed props: eyebrow, title, description, steps ({ id, title, description, bullets?, visual?, gradient?, accent? }), height?, align ("start" | "end"), onStepChange, regionLabel, className, ref.
@@ -122,9 +124,11 @@ export function ActivityCard({ days }: { days: { date: string; count: number }[]
       { name: "className", type: "string", description: "Extra classes on the card." },
       { name: "ref", type: "Ref<HTMLDivElement>", description: "Forwarded to the card (React 19 ref prop)." },
     ],
+    postPrompt:
+      "Build a React 19 + TypeScript + Tailwind v4 component called ContributionHeatmap with no dependencies: a GitHub-style calendar heatmap. Weeks as columns and days as rows, 5 colour levels with 4 presets, cells that pop in along the diagonal, a glow and tooltip on hover or focus, stats (total, longest streak, current streak, best day), a range switcher and a legend. Scrolls sideways on phones, starting at the latest weeks. No Date during render, so no hydration errors. Typed props (data, startDate, endDate, weeks, ranges, preset, colorScale, cellSize, gap, weekStart, showStats, onSelectDay, title, unit, loading), light and dark mode, accessible (grid role with arrow-key navigation, a label on every day, hidden summary), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "Contribution Heatmap" chart for Next.js App Router.
 
-- GitHub-style calendar: weeks are columns, days are rows, month labels on top, Mon/Wed/Fri on a sticky side column. Typed props: data ({ date, count }[]), startDate/endDate or weeks, ranges, preset ("accent" | "emerald" | "ember" | "ocean") or colorScale, cellSize, gap, weekStart ("sun" | "mon"), showStats, showLegend, selectedDate, onSelectDay, title, unit, loading.
+- GitHub-style calendar: weeks are columns, days are rows, month labels on top, Mon/Wed/Fri in a fixed column outside the scroll area. Typed props: data ({ date, count }[]), startDate/endDate or weeks, ranges, preset ("accent" | "emerald" | "ember" | "ocean") or colorScale, cellSize, gap, weekStart ("sun" | "mon"), showStats, showLegend, selectedDate, onSelectDay, title, unit, loading.
 - 5 levels from quartiles of non-zero days. Presets have separate light and dark values so empty cells stay visible.
 - useMemo stats: total, longest streak, current streak, best day. Segmented range switcher with a sliding pill (aria-pressed). Legend "Less ▢▢▢▢▢ More".
 - Cells pop in along the diagonal when scrolled into view; hover or focus scales a cell with a glow and a tooltip ("12 commits on Tue, Mar 4").

@@ -45,6 +45,8 @@ export function PostActions({ post }: { post: Post }) {
       { name: "disabled", type: "boolean", default: "false", description: "Blocks toggling and dims the button." },
       { name: "className", type: "string", description: "Extra classes for the button. Other button attributes and ref are forwarded." },
     ],
+    postPrompt:
+      "Build a React 19 + TypeScript + Tailwind v4 component called BurstLikeButton with no dependencies: a reaction toggle button. On like the icon pops, a ring expands and 12 particles burst out; the count rolls like an odometer, digit by digit. Unlike deflates the icon and rolls the count down. Optimistic update: if onToggle's Promise fails, it reverts, shakes and announces the error. Icon presets heart, star, bookmark and thumb, or a custom icon. Typed props (pressed, defaultPressed, onToggle, count, icon, label, size, variant, disabled, formatCount, className), responsive, light and dark mode, accessible (aria-pressed, a label with the count, live region), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "BurstLikeButton" (toggle reaction button) for Next.js App Router.
 
 - Typed props: pressed / defaultPressed, onToggle(next) (may return a Promise), count, icon ("heart" | "star" | "bookmark" | "thumb" or { icon, activeIcon, color, particles }), label, size (sm | md | lg), variant ("pill" | "icon"), disabled, formatCount (default compact: 1.2K).
@@ -120,6 +122,8 @@ export function SiteHeader({ pathname }: { pathname: string }) {
       { name: "label", type: "string", default: '"Main"', description: "Accessible name of the nav landmark." },
       { name: "className", type: "string", description: "Extra classes for the outer wrapper." },
     ],
+    postPrompt:
+      "Build a React 19 + TypeScript + Tailwind v4 component called IslandNavbar with no dependencies: a floating pill navbar that morphs like the iPhone Dynamic Island. It measures its content and springs open into a mega menu, a search panel with quick results or a notifications list, with a glow that follows the pointer and a sliding pill under the active link. Esc or an outside click closes it. On phones it becomes a logo and menu button that opens a full-width panel. Typed props (brand, links, activeId, onNavigate, notifications, searchItems, onSearch, actions, position, tone, label), responsive, light and dark mode, accessible (nav landmark, aria-expanded triggers, aria-current, focus moves into the panel and back), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "IslandNavbar" (Dynamic Island style nav) for Next.js App Router.
 
 - Typed props: brand, links ({ id, label, href?, icon?, description?, children? }[]), activeId, onNavigate, notifications ({ id, title, body, time, unread }[]), onNotificationClick, onMarkAllRead, searchItems, onSearch, actions, position ("static" | "sticky"), tone ("dark" | "glass"), label.

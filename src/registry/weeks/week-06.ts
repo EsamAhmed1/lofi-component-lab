@@ -62,6 +62,8 @@ export function SignInPage() {
       { name: "disabled", type: "boolean", default: "false", description: "Locks every field, the toggle and the submit button." },
       { name: "className", type: "string", description: "Extra classes for the card." },
     ],
+    postPrompt:
+      "Build a React 19 + TypeScript + Tailwind v4 component called PeekabooLogin with no dependencies: a sign-in form with an animated SVG owl. Its eyes follow the caret while you type the email, its wings cover its eyes on the password field, it peeks when the password is shown, shakes its head on an error, bounces and blushes on success, and blinks when idle. Validation on blur and submit, show/hide password, remember me, forgot link, loading button, error banner and success panel. Typed props (onSubmit returning a Promise, title, subtitle, hint, mascotColor, minPasswordLength, forgotHref, signUpHref, labels, disabled, className), responsive, light and dark mode, accessible (labelled fields, aria-invalid with linked errors, alert banner, aria-pressed toggle), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "PeekabooLogin" sign-in form with an animated owl mascot for Next.js App Router.
 
 - Inline SVG owl in a round window. Email focus: eyes and head follow the caret (canvas measureText of the value). Password focus: wings rise to cover the eyes. Show password on: one wing drops so it peeks. Error: head shake, sad brows, droopy lids. Success: bounce, happy eyes, blush. Idle blink on a timer via Web Animations.
@@ -134,6 +136,8 @@ export function TodayCard({ week }: { week: ActivityDay[] }) {
       { name: "animate", type: "boolean", default: "true", description: "Draw in on scroll and tween between days. Off under reduced motion." },
       { name: "className", type: "string", description: "Extra classes for the root section." },
     ],
+    postPrompt:
+      "Build a React 19 + TypeScript + Tailwind v4 component called ActivityRings with no dependencies: an Apple Watch-style ring chart. Concentric SVG rings with gradient strokes, round caps and a shadow at the tip; over 100% wraps a darker second lap. Rings draw in when scrolled into view. Hovering a ring or legend item dims the others and shows value, goal and percent in the centre. Optional row of 7 mini ring sets to switch days. Typed props (rings, size, thickness, gap, days, selectedDay, onSelectDay, title, showLegend, animate, className), responsive, light and dark mode, accessible (summary label, hidden data table, legend and day buttons with aria-pressed), reduced-motion support.",
     prompt: `Build a reusable React 19 + TypeScript + Tailwind v4 "ActivityRings" chart (Apple Watch style) for Next.js App Router.
 
 - Concentric SVG rings with a track, an angular gradient (90 color-mix arc segments), round caps and a soft shadow ahead of the tip. Over 100% wraps a darker second lap on top, capped at 2 laps.
