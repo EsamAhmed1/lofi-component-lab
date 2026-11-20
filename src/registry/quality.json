@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-20T16:50:21.084Z",
-  "generatedOn": "2026-11-20",
-  "status": "passed",
+  "generatedAt": "2026-11-20T22:16:49.446Z",
+  "generatedOn": "2026-11-21",
+  "status": "failed",
   "projects": [
     "chromium-dark",
     "chromium-light",
@@ -233,6 +233,139 @@
       "failed": []
     },
     "/components/island-navbar": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/data-table": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/lightbox-gallery": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-dark"
+      ],
+      "failed": [
+        "webkit-light"
+      ]
+    },
+    "/components/skeleton-shimmer": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/checkout-form": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/flip-team-card": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/revenue-area-chart": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/tag-input": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/share-button": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/faq-accordion": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/bottom-sheet": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/kpi-card": {
+      "passed": [
+        "chromium-light",
+        "chromium-dark",
+        "firefox-light",
+        "firefox-dark",
+        "webkit-light",
+        "webkit-dark"
+      ],
+      "failed": []
+    },
+    "/components/file-dropzone": {
       "passed": [
         "chromium-light",
         "chromium-dark",

@@ -20,6 +20,35 @@ export interface AgentLog {
 
 export const logs: AgentLog[] = [
   {
+    week: 10,
+    date: "2026-11-21",
+    outcome: "done",
+    task: "SEO and metadata audit of the live gallery, then fix everything it found",
+    kind: "SEO audit",
+    agent: "Claude Code (Claude Opus 5.5)",
+    workflow: `Prompt: "ok finish it and give me week 10" (week 10 on the roadmap: an SEO and metadata audit).
+
+Workflow:
+1. The agent fetched every live page and pulled out the title, meta description, canonical link, Open Graph and Twitter tags, lang, the h1 count and the page size. It also requested robots.txt, sitemap.xml and the social image routes.
+2. Findings:
+   - robots.txt and sitemap.xml returned 404.
+   - No page had a canonical link.
+   - There were no Open Graph or Twitter tags, so links shared on Discord showed no image.
+   - 17 of 18 component descriptions were over 160 characters (up to 242).
+   - Pages were up to 843 KB of HTML because of the highlighted source code, but only about 56 KB compressed, so that was left alone.
+3. Fixes:
+   - metadataBase and a canonical link on every page.
+   - Open Graph and Twitter tags through one helper, because child pages replace the layout's openGraph object.
+   - sitemap.ts listing every component, and robots.ts.
+   - A 1200x630 social card generated for each component with next/og.
+   - Descriptions trimmed at a word boundary.
+4. The build then failed to fetch a font for the "⌘" symbol in one card, so the card text swaps it for "Cmd".
+5. The agent re-checked the tags and images on a local build.`,
+    post: `1) Agent fetched every live page and pulled out title, description, canonical, Open Graph/Twitter tags and size, and requested robots.txt and sitemap.xml. 2) Found: robots.txt and sitemap.xml returned 404, no canonical links, no Open Graph tags (Discord links showed no image), 17 of 18 descriptions over 160 chars. 3) Added canonical links, Open Graph/Twitter tags, sitemap.ts, robots.ts and a generated 1200x630 social card per component, and trimmed descriptions. 4) Fixed a build error from the "⌘" glyph in a card.`,
+    result:
+      "Every page now has a canonical link, a 160-character description and a social card, so links pasted in Discord show a branded preview image. The sitemap lists all 33 pages and robots.txt points to it. 6 problems found and fixed in one pass.",
+  },
+  {
     week: 9,
     briefTask: "Visual QA of all 14 new components",
     briefWorkflow:

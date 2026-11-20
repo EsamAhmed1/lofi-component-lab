@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { openGraph } from "@/lib/site";
 import { registry } from "@/registry";
 import { ComponentCard } from "@/components/site/component-card";
 
 export const metadata: Metadata = {
   title: "All components",
   description: "Every component in the Lofi Component Lab, grouped by challenge week.",
+  alternates: { canonical: "/components" },
+  openGraph: openGraph("/components"),
 };
 
 export default function ComponentsIndex() {

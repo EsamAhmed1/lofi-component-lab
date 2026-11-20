@@ -42,18 +42,20 @@ Weeks 3 to 9 were built together on 20 Nov 2026 to catch up. They were redesigne
 
 | Week | Dates | Component | Type | Status |
 |---|---|---|---|---|
-| 10 | 3–9 Dec | Sortable + Filterable Data Table | table | planned |
-| 10 | 3–9 Dec | Image Lightbox Gallery | modal | planned |
-| 10 | 3–9 Dec | Skeleton Shimmer Loader | loader | planned |
-| 11 | 10–16 Dec | Multi-step Checkout Form | form | planned |
-| 11 | 10–16 Dec | Flip Team Member Card | card | planned |
-| 11 | 10–16 Dec | Animated Revenue Area Chart | chart | planned |
-| 12 | 17–23 Dec | Tag Input with Autocomplete | input | planned |
-| 12 | 17–23 Dec | Share / Copy-link Button Group | button | planned |
-| 12 | 17–23 Dec | FAQ Accordion Section | section | planned |
-| 13 | 24–30 Dec | Drawer / Bottom Sheet | modal | planned |
-| 13 | 24–30 Dec | KPI Stat Card with Sparkline | card | planned |
-| 13 | 24–30 Dec | File Upload Dropzone with Progress | form | planned |
+| 10 | 3–9 Dec | Smart Data Table | table | ✅ built 21 Nov |
+| 10 | 3–9 Dec | Lightbox Gallery | modal | ✅ built 21 Nov |
+| 10 | 3–9 Dec | Skeleton Shimmer | loader | ✅ built 21 Nov |
+| 11 | 10–16 Dec | Multi-step Checkout | form | ✅ built 21 Nov |
+| 11 | 10–16 Dec | Flip Team Card | card | ✅ built 21 Nov |
+| 11 | 10–16 Dec | Revenue Area Chart | chart | ✅ built 21 Nov |
+| 12 | 17–23 Dec | Tag Input | input | ✅ built 21 Nov |
+| 12 | 17–23 Dec | Share Button | button | ✅ built 21 Nov |
+| 12 | 17–23 Dec | FAQ Accordion | section | ✅ built 21 Nov |
+| 13 | 24–30 Dec | Snap Bottom Sheet | modal | ✅ built 21 Nov |
+| 13 | 24–30 Dec | KPI Spark Card | card | ✅ built 21 Nov |
+| 13 | 24–30 Dec | File Dropzone | form | ✅ built 21 Nov |
+
+Weeks 10 to 13 were built early, on 21 Nov 2026, so all 30 components are done.
 
 Before building, check the lofidb channel so no component repeats a teammate's.
 
@@ -70,7 +72,7 @@ Before building, check the lofidb channel so no component repeats a teammate's.
 | 07 | Accessibility audit (axe + keyboard) of the new components | Accessibility audit |
 | 08 | Script that writes the weekly Discord posts from the registry and checks the 2,000-character limit | Workflow automation |
 | 09 | Visual QA of the live site in a real Chrome browser, light and dark, desktop and mobile | Visual QA |
-| 10 | SEO and metadata audit of the site | Auditing |
+| 10 | SEO and metadata audit of the site, and fixes | SEO audit |
 | 11 | Translate UI copy and check layout in a second language | Localisation |
 | 12 | Batch-optimise and rename image assets | File automation |
 | 13 | 90-day retrospective from the logs | Analysis |

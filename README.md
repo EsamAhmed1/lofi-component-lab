@@ -69,5 +69,17 @@ Builds the site and runs Playwright in **Chromium, Firefox and WebKit, in light 
 | 08 | Contribution Heatmap | chart | [live](https://lofi-component-lab.vercel.app/components/contribution-heatmap) |
 | 09 | Burst Like Button | button | [live](https://lofi-component-lab.vercel.app/components/burst-like-button) |
 | 09 | Island Navbar | navbar | [live](https://lofi-component-lab.vercel.app/components/island-navbar) |
+| 10 | Smart Data Table | table | [live](https://lofi-component-lab.vercel.app/components/data-table) |
+| 10 | Lightbox Gallery | modal | [live](https://lofi-component-lab.vercel.app/components/lightbox-gallery) |
+| 10 | Skeleton Shimmer | loader | [live](https://lofi-component-lab.vercel.app/components/skeleton-shimmer) |
+| 11 | Multi-step Checkout | form | [live](https://lofi-component-lab.vercel.app/components/checkout-form) |
+| 11 | Flip Team Card | card | [live](https://lofi-component-lab.vercel.app/components/flip-team-card) |
+| 11 | Revenue Area Chart | chart | [live](https://lofi-component-lab.vercel.app/components/revenue-area-chart) |
+| 12 | Tag Input | input | [live](https://lofi-component-lab.vercel.app/components/tag-input) |
+| 12 | Share Button | button | [live](https://lofi-component-lab.vercel.app/components/share-button) |
+| 12 | FAQ Accordion | section | [live](https://lofi-component-lab.vercel.app/components/faq-accordion) |
+| 13 | Snap Bottom Sheet | modal | [live](https://lofi-component-lab.vercel.app/components/bottom-sheet) |
+| 13 | KPI Spark Card | card | [live](https://lofi-component-lab.vercel.app/components/kpi-card) |
+| 13 | File Dropzone | form | [live](https://lofi-component-lab.vercel.app/components/file-dropzone) |
 
 The full 90-day plan is in [ROADMAP.md](ROADMAP.md). Weekly submission drafts are in [`submissions/`](submissions).

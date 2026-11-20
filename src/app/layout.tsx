@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
+import { SITE_URL, openGraph } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,6 +21,10 @@ export const metadata: Metadata = {
   },
   description:
     "A growing gallery of reusable React + Tailwind components, built for the LofiStack 90 Day Build Challenge.",
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: "/" },
+  openGraph: openGraph("/"),
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

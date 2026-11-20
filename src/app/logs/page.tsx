@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { openGraph } from "@/lib/site";
 import { logs } from "@/registry/logs";
 
 export const metadata: Metadata = {
   title: "Agent logs",
   description: "Track B: one task a week completed with an AI agent, with the prompt or workflow and the result.",
+  alternates: { canonical: "/logs" },
+  openGraph: openGraph("/logs"),
 };
 
 export default function LogsPage() {

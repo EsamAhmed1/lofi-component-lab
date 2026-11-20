@@ -8,6 +8,7 @@ import { CodeBlock } from "@/components/site/code-block";
 import { PreviewFrame } from "@/components/site/preview-frame";
 import { Tabs } from "@/components/site/tabs";
 import quality from "@/registry/quality.json";
+import { SITE_NAME, metaDescription, openGraph } from "@/lib/site";
 
 const BROWSERS = [
   { id: "chromium", label: "Chromium" },
@@ -25,7 +26,14 @@ export async function generateMetadata(props: PageProps<"/components/[slug]">): 
   const { slug } = await props.params;
   const entry = getEntry(slug);
   if (!entry) return {};
-  return { title: entry.name, description: entry.summary };
+  const url = `/components/${entry.slug}`;
+  const description = metaDescription(entry.summary);
+  return {
+    title: entry.name,
+    description,
+    alternates: { canonical: url },
+    openGraph: openGraph(url, { type: "article", title: `${entry.name} · ${SITE_NAME}`, description }),
+  };
 }
 
 export default async function ComponentPage(props: PageProps<"/components/[slug]">) {
