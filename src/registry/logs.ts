@@ -91,7 +91,7 @@ Workflow:
     week: 6,
     briefTask: "Ran the cross-browser suite on the new components and fixed what failed",
     briefWorkflow:
-      "Split the suite into one test per component, traced a 0-tests bug to a regex my own script broke, read 31 failures as out-of-memory crashes, not component bugs, and cut workers from 4 to 2 with one retry.",
+      "Split the suite into one test per component, traced a 0-tests bug to a regex the agent's own script broke, read 31 failures as out-of-memory crashes, not component bugs, and cut workers from 4 to 2 with one retry.",
     briefResult: "166 passed, 0 failed in Chromium, Firefox and WebKit, light and dark.",
     date: "2026-11-20",
     outcome: "done",
